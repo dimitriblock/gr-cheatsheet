@@ -16,6 +16,7 @@ v = fread (f, Inf, type);
 % Close cfile
 fclose (f);
 
-
+% Plot values
+plot(v)
 
 
