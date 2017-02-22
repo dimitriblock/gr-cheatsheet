@@ -80,8 +80,6 @@ acs-*.bib
 #(r)(e)ledmac/(r)(e)ledpar
 *.end
 *.?end
-*.[1-9]
-*.[1-9][0-9]
 *.[1-9][0-9][0-9]
 *.[1-9]R
 *.[1-9][0-9]R
@@ -109,7 +107,6 @@ acs-*.bib
 *.gtex
 
 # hyperref
-*.brf
 
 # knitr
 *-concordance.tex
@@ -143,7 +140,6 @@ _minted*
 *.mw
 
 # mylatexformat
-*.fmt
 
 # nomencl
 *.nlo
@@ -218,3 +214,4 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+*~
