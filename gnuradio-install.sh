@@ -14,6 +14,35 @@ pybombs config builddocs=ON
 # Run gnuradio installation with verbose output
 pybombs -vv install gnuradio
 
+# Outputs list of Gnuradio enabled components
+# Check that the following components are enabled:
+#
+# ######################################################
+# # Gnuradio enabled components                         
+# ######################################################
+#   * python-support
+#   * testing-support
+#   * volk
+#   * doxygen
+#   * gnuradio-runtime
+#   * gr-ctrlport
+#   * * thrift
+#   * gr-blocks
+#   * gnuradio-companion
+#   * gr-fec
+#   * gr-fft
+#   * gr-filter
+#   * gr-analog
+#   * gr-digital
+#   * gr-audio
+#   * * alsa
+#   * gr-channels
+#   * gr-qtgui
+#   * gr-uhd
+#   * gr-utils
+#   * gr-wavelet
+#   * gr-zeromq
+
 # Publish install variables as environment variables
 source ~/Desktop/pybombs/setup_env.sh
 
