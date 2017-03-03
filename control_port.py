@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Control Port
-# Generated: Thu Feb 23 14:16:06 2017
+# Generated: Fri Mar  3 07:55:03 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -107,14 +107,14 @@ def main(top_block_cls=control_port, options=None):
     qapp.connect(qapp, Qt.SIGNAL("aboutToQuit()"), quitting)
     if True:
         if True:
-            (tb.blocks_ctrlport_monitor_performance_0).start()
-    else:
-        sys.stderr.write("Monitor '{0}' does not have an enable ('en') parameter.".format("tb.blocks_ctrlport_monitor_performance_0"))
-    if True:
-        if True:
             (tb.blocks_ctrlport_monitor_0).start()
     else:
         sys.stderr.write("Monitor '{0}' does not have an enable ('en') parameter.".format("tb.blocks_ctrlport_monitor_0"))
+    if True:
+        if True:
+            (tb.blocks_ctrlport_monitor_performance_0).start()
+    else:
+        sys.stderr.write("Monitor '{0}' does not have an enable ('en') parameter.".format("tb.blocks_ctrlport_monitor_performance_0"))
     qapp.exec_()
 
 
