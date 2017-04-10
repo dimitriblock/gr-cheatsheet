@@ -6,7 +6,9 @@ class vector_sum_vff(gr.sync_block):
         self.vlen = vlen
         gr.sync_block.__init__(self,
             name="vector_sum_vff",
+            # Input signature: Float vector values
             in_sig=[(numpy.float32, vlen)],
+            # Output signature: Float value
             out_sig=[(numpy.float32, 1)])
 
     def work(self,input_items,output_items):

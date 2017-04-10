@@ -14,7 +14,7 @@
     </param>
     <param>
       <key>category</key>
-      <value>[GRC Hier Blocks]</value>
+      <value>[Noise]</value>
     </param>
     <param>
       <key>comment</key>
@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>no_gui</value>
+      <value>hb</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>top_block</value>
+      <value>noise_hier</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -82,7 +82,11 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
     <param>
       <key>comment</key>
       <value></value>
@@ -93,7 +97,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 12)</value>
+      <value>(192, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -101,18 +105,30 @@
     </param>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
+      <value>amplitude</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
     </param>
     <param>
       <key>value</key>
-      <value>32000</value>
+      <value>0.1</value>
     </param>
   </block>
   <block>
     <key>analog_noise_source_x</key>
     <param>
       <key>amp</key>
-      <value>0.1</value>
+      <value>amplitude</value>
     </param>
     <param>
       <key>alias</key>
@@ -140,7 +156,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>analog_noise_source_x_0</value>
+      <value>noise</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -164,21 +180,9 @@
     </param>
   </block>
   <block>
-    <key>audio_sink</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
+    <key>pad_sink</key>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>device_name</key>
       <value></value>
     </param>
     <param>
@@ -187,7 +191,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(344, 132)</value>
+      <value>(304, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -195,24 +199,32 @@
     </param>
     <param>
       <key>id</key>
-      <value>audio_sink_0</value>
+      <value>out</value>
     </param>
     <param>
-      <key>num_inputs</key>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>out</value>
+    </param>
+    <param>
+      <key>num_streams</key>
       <value>1</value>
     </param>
     <param>
-      <key>ok_to_block</key>
-      <value>True</value>
+      <key>optional</key>
+      <value>False</value>
     </param>
     <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
+      <key>vlen</key>
+      <value>1</value>
     </param>
   </block>
   <connection>
-    <source_block_id>analog_noise_source_x_0</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_block_id>noise</source_block_id>
+    <sink_block_id>out</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

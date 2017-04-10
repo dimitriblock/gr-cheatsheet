@@ -7,6 +7,7 @@
 \usepackage{color}
 
 \renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0cm}
 
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -57,26 +58,53 @@
 
 
 \begin{multicols*}{3}
-\section{Installation}
-
-\lstinputlisting[language=sh]{gnuradio-install.sh}
 
 
-\section{Getting Started}
+\section*{Installation}
+GNU Radio installation based upon PyBOMBS on Ubuntu OS
+\lstinputlisting[caption={}, language=sh]{gnuradio-install.sh}
+
+\section*{Getting Started}
 
 \includegraphics[width=0.99\linewidth]{./grc-screenshot}
 
-\lstinputlisting[language=Python]{top_block.py}
+Run GNU Radio Companion (IDE):
+\begin{description}
+\item[Toolbar] to run flowgraphs + library search
+\item[Workspace] current flowgraph
+\item[Library] adding signal processing blocks
+\item[Terminal] lists debug information
+\end{description}
 
-\section{Gnu Radio Basics}
+\section*{Create Hierarchical Block}
 
-\subsection{Create Hierarchical Block}
+\includegraphics[width=0.99\linewidth]{./noise-hier.png}
 
-\lstinputlisting[language=Python]{inputLayer.py}
+Sub-flowgraphs can be re-used with hierarchical blocks
 
-\subsection{Create Python Block}
+\begin{description}
+\item[Generate Options] set to \verb|Hier Block|
+\item[Pad Source] adds input port
+\item[Pad Sink] adds output port
+\item[Parameter] adds variable
+\end{description}
 
-\lstinputlisting[language=Python]{vector_sum_vff.py}
+Generated flowgraphs are exported to \verb|~/.grc_gnuradio/| and will be available in GRC library after reloading
+
+
+\section*{Create Python Block}
+
+New signal processing blocks can be added with \textbf{Python Block}
+
+\lstinputlisting[caption={},language=Python]{vector_sum_vff.py}
+Signal processing lock for summation of an input vector:
+\begin{description}
+\item[Block type] \verb|gr.sync_block| for synchronized input and output item rates
+
+\item[In-/output signature] \verb|[(np.float32, 1)]| for 32-bit float items
+
+\item[Function work] Signal processing goes here
+\end{description}
 
 %\subsection{Create C++ Block}
 %
@@ -86,20 +114,24 @@
 %
 %\subsection{Message Passing}
 
-\subsection{Post-Processing}
+\section*{Post-Processing}
+Matlab/octave post-processing of output file
+\lstinputlisting[caption={},language=Matlab]{read_binary_file.m}
 
-\lstinputlisting[language=Matlab]{read_binary_file.m}
-
-\subsection{Performance Monitoring}
-
-\lstinputlisting[language=sh]{gr-perf-monitorx-prerequiremets.sh}
-
-\lstinputlisting[caption={./gnuradio/config.conf}]{config.conf}
+\section*{Performance Monitoring}
+OS requirements:
+\lstinputlisting[caption={},language=sh]{gr-perf-monitorx-prerequiremets.sh}
+Change in file \texttt{./gnuradio/config.conf}:
+\lstinputlisting[caption={}]{config.conf}
 
 \includegraphics[width=0.99\linewidth]{control-port.png}
+\begin{description}
+\item[CtrlPort Monitor] lists rates, memory, etc
+\item[CtrlPort Performance Monitor] shows processing graph
+\end{description}
 
 \includegraphics[width=0.99\linewidth]{gr-perf-monitorx-screenshot.png}
-
+Processing graph visualizes
 \begin{description}
 \item[Block size] Processing time
 \item[Edge color/width] Output buffer fullness
