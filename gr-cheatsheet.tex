@@ -70,27 +70,26 @@ Installation with PyBOMBS on Ubuntu OS
 
 Run GNU Radio Companion (IDE):
 \begin{description}
-\item[Toolbar] to run flowgraphs + library search
-\item[Workspace] current flowgraph
-\item[Library] adding signal processing blocks
-\item[Terminal] lists debug information
+\item[Toolbar] Run flowgraphs + search for blocks
+\item[Workspace] Current flowgraph + options
+\item[Blocks] Add signal processing blocks
+\item[Terminal] Debug information
 \end{description}
 
 \section*{Create Hierarchical Block}
 
 \includegraphics[width=0.99\linewidth]{./noise-hier.png}
 
-Sub-flowgraphs can be re-used with hierarchical blocks
+Steps to create reusable sub-flowgraphs:
 
 \begin{description}
-\item[Generate Options] set to \verb|Hier Block|
-\item[Pad Source] adds input port
-\item[Pad Sink] adds output port
-\item[Parameter] adds variable
+\item[Options $\Rightarrow$ Generate Options] \verb|'Hier Block'|
+\item[Blocks $\Rightarrow$ Pad Source] Add input port
+\item[Blocks $\Rightarrow$ Pad Sink] Add output port
+\item[Blocks $\Rightarrow$ Parameter] Add variable
+\item[Toolbar $\Rightarrow$ Generate] Generate and export hierarchical block  to \verb|~/.grc_gnuradio/|
+\item[Toolbar $\Rightarrow$ Reload] Load blocks
 \end{description}
-
-Generated flowgraphs are exported to \verb|~/.grc_gnuradio/| and will be available in GRC library after reloading
-
 
 \section*{Create Python Block}
 
