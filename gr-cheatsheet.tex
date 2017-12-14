@@ -114,19 +114,19 @@ Signal processing lock for summation of an input vector:
 %\subsection{Message Passing}
 
 \section*{Post-Processing}
-Matlab/octave post-processing of output file
+Read binary output file with Matlab/octave
 \lstinputlisting[caption={},language=Matlab]{read_binary_file.m}
 
 \section*{Performance Monitoring}
-OS requirements:
+Install packages
 \lstinputlisting[caption={},language=sh]{gr-perf-monitorx-prerequiremets.sh}
-Change in file \texttt{./gnuradio/config.conf}:
+Adapt \verb|./gnuradio/config.conf|
 \lstinputlisting[caption={}]{config.conf}
 
 \includegraphics[width=0.99\linewidth]{control-port.png}
 \begin{description}
-\item[CtrlPort Monitor] lists rates, memory, etc
-\item[CtrlPort Performance Monitor] shows processing graph
+\item[Blocks $\Rightarrow$ CtrlPort Monitor] for counters
+\item[Blocks $\Rightarrow$ CtrlPort Performance Monitor] for graph
 \end{description}
 
 \includegraphics[width=0.99\linewidth]{gr-perf-monitorx-screenshot.png}
