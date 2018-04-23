@@ -5,7 +5,7 @@ sudo pip install PyBOMBS
 pybombs auto-config
 
 # Enable documentation
-pybombs config builddocs=ON
+pybombs config builddocs ON
 
 # Add default recipe lists
 pybombs recipes add-defaults
